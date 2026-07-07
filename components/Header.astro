@@ -1,4 +1,6 @@
 ---
+import defaultAvatar from "../assets/headshot.jpg"
+
 interface NavItem {
   label: string
   href: string
@@ -14,7 +16,7 @@ interface Props {
 const {
   siteTitle = "Kevin Schaul",
   tagline = "Visual journalist/hacker covering AI",
-  avatar = "/headshot.jpg",
+  avatar = defaultAvatar.src,
   nav = [
     { label: "About", href: "/contact/" },
     { label: "LLM evals", href: "https://kschaul.com/llm-evals/" },
