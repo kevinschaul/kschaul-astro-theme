@@ -1,0 +1,70 @@
+---
+interface NavItem {
+  label: string
+  href: string
+}
+
+interface Props {
+  siteTitle?: string
+  tagline?: string
+  avatar?: string
+  nav?: NavItem[]
+}
+
+const {
+  siteTitle = "Kevin Schaul",
+  tagline = "Visual journalist/hacker covering AI",
+  avatar = "/headshot.jpg",
+  nav = [
+    { label: "About", href: "/contact/" },
+    { label: "LLM evals", href: "https://kschaul.com/llm-evals/" },
+    { label: "Follow", href: "/follow/" },
+  ],
+} = Astro.props
+---
+
+<header class="t-header t-container">
+  <div class="t-header-inner">
+    <div class="t-brand">
+      <a href="/" class="t-brand-avatar">
+        <img
+          src={avatar}
+          alt={siteTitle}
+        />
+      </a>
+      <div class="t-brand-text">
+        <a class="t-header-title" href="/">
+          {siteTitle}
+        </a>
+        {tagline && <p class="t-header-tagline">{tagline}</p>}
+      </div>
+    </div>
+
+    <nav class="t-header-nav" aria-label="Primary">
+      {
+        nav.map((item) => (
+          <a href={item.href}>
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<script is:inline>
+  const htmlClass = document.documentElement.classList
+  setTimeout(() => {
+    htmlClass.remove("not-ready")
+  }, 10)
+
+  const darkScheme = window.matchMedia("(prefers-color-scheme: dark)")
+  const setDark = (isDark) => {
+    htmlClass[isDark ? "add" : "remove"]("dark")
+  }
+
+  setDark(darkScheme.matches)
+  darkScheme.addEventListener("change", (event) => {
+    setDark(event.matches)
+  })
+</script>

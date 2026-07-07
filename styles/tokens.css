@@ -1,0 +1,55 @@
+/*
+ * Design tokens matching the kschaul.com "paper" Hugo theme.
+ * Light bg is the paper theme's "gray" color; dark bg approximates its
+ * black/85 overlay over that color.
+ */
+:root {
+  --w: calc(680px + 32px * 2);
+
+  --bg: #fbfbfb;
+  --fg: #000;
+  --text: oklch(0.371 0 0);
+  --muted: oklch(0.551 0 0);
+  --meta-link: oklch(55.1% 0.027 264.364);
+  --meta-link-hover: oklch(70.7% 0.022 261.325);
+  --border: rgba(0, 0, 0, 0.1);
+  --surface: rgba(0, 0, 0, 0.03);
+  --surface-hover: rgba(0, 0, 0, 0.06);
+  --card-bg: #fff;
+  --accent: #6b21a8;
+
+  --pass: #d5edca;
+  --pass-fg: #2e5c1a;
+  --fail: #f9dddb;
+  --fail-fg: #8c2b24;
+  --none: #e3f2fd;
+  --none-fg: #1a5c8c;
+
+  --font-sans:
+    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+html.dark {
+  --bg: #262626;
+  --fg: #fff;
+  --text: oklch(0.87 0 0);
+  --muted: oklch(0.68 0 0);
+  --meta-link: oklch(70.7% 0.022 261.325);
+  --meta-link-hover: oklch(87.2% 0.01 258.338);
+  --border: rgba(255, 255, 255, 0.14);
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-hover: rgba(255, 255, 255, 0.1);
+  --card-bg: #000;
+  --accent: #d8b4fe;
+
+  --pass: #2e4a20;
+  --pass-fg: #c4e5b2;
+  --fail: #59261f;
+  --fail-fg: #f3c1bd;
+  --none: #1e3a52;
+  --none-fg: #b5d9f5;
+}

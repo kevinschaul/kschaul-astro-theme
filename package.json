@@ -1,0 +1,14 @@
+{
+  "name": "@kevinschaul/theme",
+  "version": "0.1.0",
+  "description": "Shared site theme (tokens, base styles, layout components) matching kschaul.com",
+  "type": "module",
+  "exports": {
+    "./styles/*": "./styles/*",
+    "./components/*": "./components/*"
+  },
+  "keywords": ["astro-component", "theme"],
+  "peerDependencies": {
+    "astro": ">=5.0.0"
+  }
+}
