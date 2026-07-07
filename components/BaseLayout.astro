@@ -23,7 +23,7 @@ interface Props {
   canonical?: string
   image?: string
   article?: Article
-  isPage?: boolean // content page: hljs + full schema meta
+  isPage?: boolean // content page: full schema meta
   externalUrl?: string // project pages: meta-refresh redirect
   siteTitle?: string
   tagline?: string
@@ -72,17 +72,6 @@ const fullTitle = title ? `${title} - ${siteTitle}` : siteTitle
 
     <meta name="description" content={description} />
     <meta name="author" content={author} />
-
-    {
-      isPage && (
-        <script
-          defer
-          src="/highlight.min.js"
-          onload="hljs.initHighlightingOnLoad();"
-          is:inline
-        />
-      )
-    }
 
     <link rel="icon" href="/favicon.ico" />
 
