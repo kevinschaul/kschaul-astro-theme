@@ -152,18 +152,15 @@ html.dark .t-theme-toggle .t-icon-moon {
 
 /* Footer */
 .t-footer {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  height: 4.5rem;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   opacity: 0.6;
+  margin-bottom: 0.5rem;
 }
 
 .t-footer-copyright {
-  margin-right: auto;
+  margin-bottom: 0.5rem;
 }
 
 .t-footer a {
