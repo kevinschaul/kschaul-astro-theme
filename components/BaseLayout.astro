@@ -133,6 +133,8 @@ const fullTitle = title ? `${title} - ${siteTitle}` : siteTitle
       )
     }
 
+    <slot name="head" />
+
     {
       cloudflareToken && (
         <script
@@ -143,8 +145,6 @@ const fullTitle = title ? `${title} - ${siteTitle}` : siteTitle
         />
       )
     }
-
-    <slot name="head" />
   </head>
   <body>
     <Header siteTitle={siteTitle} tagline={tagline} nav={nav} />
